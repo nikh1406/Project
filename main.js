@@ -1,6 +1,6 @@
 import data from "./contruCode.json";
-import { signup } from "./signup/signup"; 
-import { signin } from "./signIn/signin"; 
+import { signupForm } from "./signup/signup"; 
+import { signinForm } from "./signIn/signin"; 
 
 $(document).ready(function () {
   $("#signup").hide();
@@ -20,7 +20,10 @@ $(document).ready(function () {
     $("#signup").show();
     $("#signin").hide();
     $("#login").hide();
-    signup()
+    $("#signupFormsignin").click((e) => {
+      e.preventDefault();
+      signinForm()
+    });
   })
 
   $(".signinLink").click((e)=>{
@@ -28,26 +31,31 @@ $(document).ready(function () {
     $("#signin").show();
     $("#signup").hide();
     $("#login").hide();
-    // signin()
+    $("#signupForm").click((e) => {
+      e.preventDefault();
+      signupForm()
+    })
   })
 
 
   $("#signupForm").click((e) => {
     e.preventDefault();
-    signup()
+    signupForm()
   })
   $("#signupFormsignin").click((e) => {
     e.preventDefault();
-    signin()
+    signinForm()
   });
 
 
   $("#signinBTN").click(()=>{
     $("#signup").hide();
+    $("#login").hide();
     $("#signin").show();
   })
   $("#signupBTN").click(()=>{
     $("#signin").hide();
+    $("#login").hide();
     $("#signup").show();
   })
   

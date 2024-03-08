@@ -1,5 +1,5 @@
 
-export function signin() {
+export function signinForm() {
 
   let email = $("#emailsignin").val();
   let password = $("#passwdsignin").val();
@@ -13,6 +13,8 @@ export function signin() {
       }
     });
     if(signInflag){
+      $("#emailsignin").val("");
+      $("#passwdsignin").val("");
       $("#signup").hide();
       $("#signin").hide();
       $("#login").show()
