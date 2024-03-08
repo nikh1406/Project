@@ -1,0 +1,32 @@
+body {
+  background-color: #f8f9fa;
+  font-family: sans-serif;
+}
+
+.form-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background-color: #388e3c;
+  border-color: #388e3c;
+}
+
+.btn-link {
+  color: #388e3c;
+}
+
+.text-muted {
+  color: #aaa;
+}
+
+header{
+  /* position: webkit-sticky; */
+  position: sticky;
+  top: 0;
+}
