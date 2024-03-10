@@ -17,6 +17,7 @@ $(document).ready(function () {
 
   $("#siguplink").click((e) => {
     e.preventDefault();
+    $("#homeDefaultBody").hide();
     $("#signup").show();
     $("#signin").hide();
     $("#login").hide();
@@ -27,6 +28,7 @@ $(document).ready(function () {
   })
 
   $(".signinLink").click((e)=>{
+    $("#homeDefaultBody").hide();
     e.preventDefault();
     $("#signin").show();
     $("#signup").hide();
@@ -40,20 +42,24 @@ $(document).ready(function () {
 
   $("#signupForm").click((e) => {
     e.preventDefault();
+    $("#homeDefaultBody").hide();
     signupForm()
   })
   $("#signupFormsignin").click((e) => {
     e.preventDefault();
+    $("#homeDefaultBody").hide();
     signinForm()
   });
 
 
   $("#signinBTN").click(()=>{
+    $("#homeDefaultBody").hide();
     $("#signup").hide();
     $("#login").hide();
     $("#signin").show();
   })
   $("#signupBTN").click(()=>{
+    $("#homeDefaultBody").hide();
     $("#signin").hide();
     $("#login").hide();
     $("#signup").show();

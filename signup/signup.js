@@ -1,6 +1,6 @@
 
 export function signupForm() {
-
+  
   let obj = {
     name: $("#name").val(),
     email: $("#email").val(),

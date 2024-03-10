@@ -12,13 +12,13 @@ export function signinForm() {
         return
       }
     });
-    if(signInflag){
+    if (signInflag) {
       $("#emailsignin").val("");
       $("#passwdsignin").val("");
       $("#signup").hide();
       $("#signin").hide();
-      $("#login").show()
-    }else{
+      window.location.replace("../section/Home/index.html");
+    } else {
       window.alert("Email or password incorrect!");
       $("#emailsignin").val("");
       $("#passwdsignin").val("");

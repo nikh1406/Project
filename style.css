@@ -30,3 +30,25 @@ header{
   position: sticky;
   top: 0;
 }
+
+.imgDivMainClass{
+  height: 92vh;
+}
+
+#signup img{
+  opacity: 0.5;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+
+  
+}
+#signin img{
+  opacity: 0.5;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+  height: 100vh;
+}
