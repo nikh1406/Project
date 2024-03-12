@@ -1,0 +1,36 @@
+// Dummy data for testing
+const dummyUsers: UserData[] = [
+    { username: 'user1', email: 'user1@example.com', password: hashPassword('password1') },
+    { username: 'user2', email: 'user2@example.com', password: hashPassword('password2') },
+];
+
+const dummyRestaurants: Restaurant[] = [
+    { 
+        restaurantName: 'Restaurant A',
+        location: 'City A',
+        cuisineType: 'Cuisine A',
+        categories: ['Fast Food', 'Italian'],
+        description: 'A popular spot for quick and delicious meals.'
+    },
+    { 
+        restaurantName: 'Restaurant B',
+        location: 'City B',
+        cuisineType: 'Cuisine B',
+        categories: ['Mexican', 'Vegetarian'],
+        description: 'Enjoy a variety of Mexican and vegetarian dishes in a cozy environment.'
+    },
+    { 
+        restaurantName: 'Restaurant C',
+        location: 'City C',
+        cuisineType: 'Cuisine C',
+        categories: ['Asian', 'Seafood'],
+        description: 'Experience the best of Asian and seafood cuisine with a scenic view.'
+    },
+];
+
+// Save dummy data to local storage
+localStorage.setItem('users', JSON.stringify(dummyUsers));
+localStorage.setItem('restaurants', JSON.stringify(dummyRestaurants));
+
+// Example: Call the authentication check when the page loads
+checkAuthentication();
