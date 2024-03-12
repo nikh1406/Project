@@ -34,3 +34,42 @@ localStorage.setItem('restaurants', JSON.stringify(dummyRestaurants));
 
 // Example: Call the authentication check when the page loads
 checkAuthentication();
+
+
+
+
+
+
+// Function to display restaurant details on the details page
+function displayDetails() {
+    const detailsContainer = document.getElementById('detailsContainer');
+
+    // Extract restaurant name from the URL query parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const restaurantName = urlParams.get('id');
+
+    // Fetch restaurant data from local storage
+    const restaurants = JSON.parse(localStorage.getItem('restaurants') || '[]') as Restaurant[];
+
+    // Find the specific restaurant by name
+    const selectedRestaurant = restaurants.find(restaurant => restaurant.restaurantName === restaurantName);
+
+    // Display restaurant details
+    if (detailsContainer && selectedRestaurant) {
+        detailsContainer.innerHTML = `
+            <h1>${selectedRestaurant.restaurantName}</h1>
+            <p><strong>Location:</strong> ${selectedRestaurant.location}</p>
+            <p><strong>Cuisine Type:</strong> ${selectedRestaurant.cuisineType}</p>
+            <h3>Categories:</h3>
+            <ul>
+                ${selectedRestaurant.categories.map(category => `<li>${category}</li>`).join('')}
+            </ul>
+            <p>${selectedRestaurant.description || 'No description available.'}</p>
+            <p><a href="categories.html">Back to Categories</a></p>
+        `;
+    }
+}
+
+// Call the function when the details page loads
+displayDetails();
+
